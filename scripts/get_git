@@ -45,7 +45,7 @@ git -C "${PACKAGE}" remote add origin ${PKG_URL}
 
 build_msg "CLR_GET" "GIT FETCH" "${1}"
 git -C "${PACKAGE}" fetch --depth 1 origin ${PKG_VERSION}
-git -C "${PACKAGE}" checkout FETCH_HEAD
+git -C "${PACKAGE}" -c advice.detachedHead=false checkout FETCH_HEAD
 
 if [ "${PKG_GIT_SKIP_SUBMODULE}" != "yes" ]; then
   build_msg "CLR_GET" "GIT SUBMODULE" "${1}"
