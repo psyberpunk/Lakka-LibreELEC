@@ -10,6 +10,11 @@ PKG_GIT_SKIP_SUBMODULE="yes"
 
 PKG_MAKE_OPTS_TARGET="-C src/libretro"
 
+post_unpack_target() {
+  # Clone only the libretro-common submodule, skip Bitbucket submodules
+  git -C ${PKG_BUILD} submodule update --init --depth 1 src/libretro/libretro-common
+}
+
 pre_make_target() {
   cd ${PKG_BUILD}
 }
