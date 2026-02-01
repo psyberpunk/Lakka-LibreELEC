@@ -12,15 +12,15 @@ PKG_MAKE_OPTS_TARGET="-C src/libretro"
 
 post_unpack_target() {
   # Clone only the libretro-common submodule, skip Bitbucket submodules
-  git -C ${PKG_BUILD} submodule update --init --depth 1 src/libretro/libretro-common
+  git -C "${PKG_BUILD}" submodule update --init --depth 1 src/libretro/libretro-common
 }
 
 pre_make_target() {
   # Ensure submodule is present before building
   if [ ! -f "${PKG_BUILD}/src/libretro/libretro-common/compat/compat_posix_string.c" ]; then
-    git -C ${PKG_BUILD} submodule update --init --depth 1 src/libretro/libretro-common
+    git -C "${PKG_BUILD}" submodule update --init --depth 1 src/libretro/libretro-common
   fi
-  cd ${PKG_BUILD}
+  cd "${PKG_BUILD}"
 }
 
 makeinstall_target() {
