@@ -40,7 +40,7 @@ rm -rf "${STAMP_URL}" "${STAMP_SHA}" "${PACKAGE}" "${GIT_TARBALL}" "${GIT_STAMP_
 
 mkdir -p "${PACKAGE}"
 
-git -C "${PACKAGE}" init
+git -C "${PACKAGE}" init --initial-branch=master
 git -C "${PACKAGE}" remote add origin ${PKG_URL}
 
 build_msg "CLR_GET" "GIT FETCH" "${1}"
