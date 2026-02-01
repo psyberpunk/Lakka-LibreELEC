@@ -100,7 +100,11 @@ PROJECT=Ayn DEVICE=Odin ARCH=aarch64 make image
 ## Build All Platforms
 
 ```bash
+# Build all platforms (base packages only - ~443 packages)
 ./build_all.sh
+
+# Build all platforms with all packages including addons (~1163 packages)
+MTADDONBUILD=yes ./build_all.sh
 ```
 
 ## Docker Build
@@ -133,6 +137,9 @@ make distclean
 
 # Build with custom thread count
 THREADCOUNT=8 PROJECT=RPi DEVICE=RPi5 ARCH=aarch64 make image
+
+# Build with all packages including addons (~1163 packages instead of ~443 base)
+MTADDONBUILD=yes PROJECT=RPi DEVICE=RPi5 ARCH=aarch64 make image
 
 # Check dependencies
 ./scripts/checkdeps

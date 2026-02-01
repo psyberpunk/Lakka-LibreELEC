@@ -327,6 +327,28 @@ REFRESH_RATE=1s ./build_all.sh
 DASHBOARD_MODE=yes BAILOUT_FAILED=yes THREADCOUNT=8 ./build_all.sh
 ```
 
+### Building All Packages Including Addons
+
+By default, Lakka builds approximately **443 base packages** that form the core system. However, the full package repository contains approximately **1163 packages** in total, which includes optional addon packages.
+
+To build **all packages** (base + addons):
+
+```bash
+MTADDONBUILD=yes ./build_all.sh
+```
+
+For a single platform with all packages:
+
+```bash
+MTADDONBUILD=yes PROJECT=RPi DEVICE=RPi5 ARCH=aarch64 make image
+```
+
+**Package Types:**
+- **Base packages** (~443): Core system components required for Lakka to function
+- **Addon packages** (~720): Optional packages including emulator cores, games, tools, and utilities
+
+**Note:** Building all packages significantly increases build time and disk space requirements (100+ GB recommended).
+
 ## Using Docker
 
 Docker provides a consistent build environment across different host systems.
