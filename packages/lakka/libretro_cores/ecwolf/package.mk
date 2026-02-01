@@ -16,6 +16,10 @@ post_unpack_target() {
 }
 
 pre_make_target() {
+  # Ensure submodule is present before building
+  if [ ! -f "${PKG_BUILD}/src/libretro/libretro-common/compat/compat_posix_string.c" ]; then
+    git -C ${PKG_BUILD} submodule update --init --depth 1 src/libretro/libretro-common
+  fi
   cd ${PKG_BUILD}
 }
 
