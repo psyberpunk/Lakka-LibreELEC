@@ -327,6 +327,28 @@ REFRESH_RATE=1s ./build_all.sh
 DASHBOARD_MODE=yes BAILOUT_FAILED=yes THREADCOUNT=8 ./build_all.sh
 ```
 
+### Compilar Todos los Paquetes Incluyendo Addons
+
+Por defecto, Lakka compila aproximadamente **443 paquetes base** que forman el sistema central. Sin embargo, el repositorio completo de paquetes contiene aproximadamente **1163 paquetes** en total, lo que incluye paquetes addon opcionales.
+
+Para compilar **todos los paquetes** (base + addons):
+
+```bash
+MTADDONBUILD=yes ./build_all.sh
+```
+
+Para una sola plataforma con todos los paquetes:
+
+```bash
+MTADDONBUILD=yes PROJECT=RPi DEVICE=RPi5 ARCH=aarch64 make image
+```
+
+**Tipos de Paquetes:**
+- **Paquetes base** (~443): Componentes del sistema central requeridos para que Lakka funcione
+- **Paquetes addon** (~720): Paquetes opcionales incluyendo núcleos de emuladores, juegos, herramientas y utilidades
+
+**Nota:** Compilar todos los paquetes aumenta significativamente el tiempo de compilación y los requisitos de espacio en disco (se recomiendan más de 100 GB).
+
 ## Usar Docker
 
 Docker proporciona un entorno de compilación consistente en diferentes sistemas host.
