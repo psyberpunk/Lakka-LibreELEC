@@ -50,6 +50,31 @@ This directory contains additional libretro cores not present in the main Lakka 
 #### Other Systems
 - **easyrpg** - RPG Maker 2000/2003 game player
 - **ppsspp** - PSP emulator (libretro core)
+- **neocd_libretro** - Neo Geo CD emulator
+- **theodore** - Thomson TO8/TO8D/TO9/TO9+ computer emulator
+
+#### Additional Cores
+- **craft** - Minecraft-inspired game
+- **dosbox-svn** - DOSBox emulator (newer version)
+- **fake_08** - PICO-8 fantasy console
+- **freechaf** - Fairchild Channel F emulator
+- **freeintv** - Intellivision emulator
+- **gpsp** - Game Boy Advance emulator
+- **lr-dolphin** - GameCube/Wii emulator (libretro)
+- **np2kai** - NEC PC-98 emulator
+- **px68k** - Sharp X68000 emulator
+- **quasi88** - NEC PC-8801 emulator
+- **vba-next** - Game Boy Advance emulator
+- **vircon32** - Fantasy console
+
+### Standalone Emulators
+
+High-performance standalone (non-libretro) emulators:
+- **PPSSPPSDL** - PSP emulator with SDL backend
+- **dolphinSA** - GameCube/Wii emulator
+- **duckstation** - PlayStation emulator
+- **flycastsa** - Dreamcast emulator
+- **amiberry** - Amiga emulator
 
 ## Integration Notes
 
