@@ -13,6 +13,13 @@ Lakka is a lightweight Linux distribution that transforms a small computer into 
 
 Please refer to our website https://www.lakka.tv/get on how to setup Lakka.
 
+## Building from source
+
+If you want to build Lakka from source for any supported platform including Raspberry Pi 5:
+
+* [BUILD.md](BUILD.md) - Complete build instructions (English)
+* [BUILD.es.md](BUILD.es.md) - Instrucciones de compilación completas (Español)
+
 ## Support
 
 * [FAQ](https://github.com/libretro/Lakka-LibreELEC/wiki/FAQ)
