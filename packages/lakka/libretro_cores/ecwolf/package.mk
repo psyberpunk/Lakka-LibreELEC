@@ -6,6 +6,7 @@ PKG_URL="${PKG_SITE}.git"
 PKG_DEPENDS_TARGET="toolchain"
 PKG_SHORTDESC="ECWolf is a port of the Wolfenstein 3D engine based of Wolf4SDL."
 PKG_TOOLCHAIN="make"
+PKG_GIT_SKIP_SUBMODULE="yes"
 
 PKG_MAKE_OPTS_TARGET="-C src/libretro"
 
